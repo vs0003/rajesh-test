@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: download git code 
-        run: git clone https://github.com/Shubham-Bawa/shubham-test.git 
+        run: git clone https://github.com/vs0003/rajesh-test.git 
       - name: list of files 
         run: pwd && ls   
   demo:
@@ -36,7 +36,7 @@ jobs:
     needs: [build, test]
     steps:
       - name: download git code 
-        run: git clone https://github.com/Shubham-Bawa/shubham-test.git 
+        run: git clone https://github.com/vs0003/rajesh-test.git 
       - name: list of files 
         run: pwd && ls   
   demo2:
@@ -44,6 +44,6 @@ jobs:
     needs: [build]
     steps:
       - name: download git code 
-        run: git clone https://github.com/Shubham-Bawa/shubham-test.git 
+        run: git clone https://github.com/vs0003/rajesh-test.git 
       - name: list of files 
         run: pwd && ls   
