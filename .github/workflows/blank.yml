@@ -34,3 +34,11 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: download git code 
+        run: git clone https://github.com/Shubham-Bawa/shubham-test.git 
+      - name: list of files 
+      - run: pwd && ls   
+        
