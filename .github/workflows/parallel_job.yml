@@ -12,17 +12,17 @@ on:
     branches: [ "main" ]
 jobs:
   lint:
-    runs-on: label1
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: echo "Hello world"
   test:
-    runs-on: label1
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: echo "Hello world"
   publish:
-    runs-on: label1
+    runs-on: ubuntu-latest
     needs: [lint, test]
     steps:
       - uses: actions/checkout@v2
@@ -30,7 +30,7 @@ jobs:
   test1:
     strategy:
       matrix:
-        os: [label1, windows-latest, macos-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: $
     steps:
       - uses: actions/checkout@v2
