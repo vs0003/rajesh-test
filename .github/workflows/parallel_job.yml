@@ -11,17 +11,17 @@ on:
     branches: [ "main" ]
 jobs:
   lint:
-    runs-on: rajesh_label
+    runs-on: label1
     steps:
       - uses: actions/checkout@v2
       - run: echo "Hello world"
   test:
-    runs-on: rajesh_label
+    runs-on: label1
     steps:
       - uses: actions/checkout@v2
       - run: echo "Hello world"
   publish:
-    runs-on: rajesh_label
+    runs-on: label1
     needs: [lint, test]
     steps:
       - uses: actions/checkout@v2
@@ -29,7 +29,7 @@ jobs:
   test1:
     strategy:
       matrix:
-        os: [rajesh_label, windows-latest, macos-latest]
+        os: [label1, windows-latest, macos-latest]
     runs-on: $
     steps:
       - uses: actions/checkout@v2
