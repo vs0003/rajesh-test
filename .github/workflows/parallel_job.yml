@@ -34,4 +34,4 @@ jobs:
     runs-on: $
     steps:
       - uses: actions/checkout@v2
-      - run: echo "hello Test"
+      - run: echo {{github.job}}
